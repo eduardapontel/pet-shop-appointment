@@ -1,0 +1,43 @@
+:root,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+:root {
+    --content-primary: #fff;
+    --content-secondary: #98959d;
+    --content-tertiary: #666;
+    --content-brand: #9282fa;
+
+    --background-primary: #151515;
+    --background-secondary: #1e1e1e;
+    --background-tertiary: #23242c;
+    --background-brand: #9282fa;
+    --background-highlights: #bdb4fa;
+
+    --border-primary: #3e3c41;
+    --border-secondary: #86818c;
+    --border-brand: #9282fa;
+    --border-divisor: #353339;
+
+    --accent-blue: #027df0;
+    --accent-blue-light: #16487a;
+    --accent-yellow: #f0dc02;
+    --accent-yellow-light: #756e1b;
+    --accent-orange: #f09102;
+    --accent-orange-light: #75501b;
+
+    --title: normal normal 700 24px/32px 'Inter tight', sans-serif;
+
+    --paragraph-medium: normal normal 400 14px/24px 'Inter', sans-serif;
+    --paragraph-small: normal normal 400 12px/16px 'Inter', sans-serif;
+    --label-large: normal normal 700 16px/24px 'Inter', sans-serif;
+    --label-medium: normal normal 700 14px/24px 'Inter', sans-serif;
+    --label-small: normal normal 700 12px/16px 'Inter', sans-serif;
+    --link: normal normal 400 12px/16px 'Inter', sans-serif;
+}
+
+body {
+    background-color: #14151d;
+}
