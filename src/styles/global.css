@@ -41,3 +41,8 @@ body {
 body {
     background-color: #14151d;
 }
+
+html,
+body {
+    height: 100%;
+}

@@ -122,6 +122,62 @@
     <footer>
         <button>NOVO AGENDAMENTO</button>
     </footer>
+
+    <div id="modal-wrapper">
+        <div id="modal">
+            <div id="form-container">
+                <div id="form-header">
+                    <h2>Agende um atendimento</h2>
+                    <p>Preencha os dados do cliente para realizar o agendamento:</p>
+                </div>
+                <form action="">
+                    <div class="input-container">
+                        <p>Nome do tutor</p>
+                        <div class="input">
+                            <img src="./src/assets/user.svg" alt="user icon">
+                            <input type="text" placeholder="Helena Souza">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <p>Nome do pet</p>
+                        <div class="input">
+                            <img src="./src/assets/pet-footprint.svg" alt="pet footprint icon">
+                            <input type="text" placeholder="Cheddar">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <p>Telefone</p>
+                        <div class="input">
+                            <img src="./src/assets/phone.svg" alt="phone icon">
+                            <input type="text" placeholder="00000 000000">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <p>Descrição do serviço</p>
+                        <div class="input">
+                            <textarea placeholder="banho e tosa"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <p>Data</p>
+                        <div class="input">
+                            <img src="./src/assets/calendar.svg" alt="calendar icon">
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <p>Hora</p>
+                        <div class="input">
+                            <img src="./src/assets/clock.svg" alt="clock icon">
+                            <input id="input-time" type="time" value="09:00">
+                        </div>
+                    </div>
+                </form>
+
+                <button>AGENDAR</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
