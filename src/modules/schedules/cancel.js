@@ -1,8 +1,8 @@
 import { daySchedules } from './load';
-import { cancelSchedule } from '../../services/schedule-cancel';
+import { cancelSchedule } from '../../services/cancel-schedule';
 
 const periods = document.querySelectorAll('.period');
-const dateSearch = document.querySelector('#date-search').value;
+const selectedDate = document.querySelector('#date-search');
 
 periods.forEach((period) => {
     period.addEventListener('click', async (e) => {
@@ -11,12 +11,10 @@ periods.forEach((period) => {
             const item = e.target.closest('.client');
             const { id } = item.dataset;
             if (id) {
-                console.log(id);
-                
                 const confirmation = confirm('Are you sure you want to cancel this schedule?');
                 if (confirmation) {
                     await cancelSchedule({ id });
-                    daySchedules(dateSearch);
+                    daySchedules(selectedDate.value);
                 }
             }
         }
