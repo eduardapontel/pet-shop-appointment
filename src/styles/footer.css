@@ -25,3 +25,9 @@ footer {
         font: var(--label-large);
     }
 }
+
+@media (min-width: 60em) { 
+    footer{
+        all: unset;
+    }
+}

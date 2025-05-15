@@ -20,112 +20,63 @@
         </div>
     </header>
 
-    <main>
-        <div id="main-header">
-            <div id="titles-container">
-                <h1>Sua agenda</h1>
-                <h3>Aqui você pode ver todos os clientes e serviços agendados para hoje.</h3>
-            </div>
-            <div id="input-date-container">
-                <img src="./src/assets/calendar.svg" alt="calendar">
-                <input type="date" name="" id="">
-            </div>
-        </div>
-        <div id="list">
-            <div class="period" id="morning">
-                <div id="header">
-                    <img src="./src/assets/sun.svg" alt="sun">
-                    <h4>Manhã</h4>
-                    <p>09h-12h</p>
+    <div id="main-container">
+        <main>
+            <div id="main-header">
+                <div id="titles-container">
+                    <h1>Sua agenda</h1>
+                    <h3>Aqui você pode ver todos os clientes e serviços agendados para hoje.</h3>
                 </div>
-                <div id="clients">
-                    <div class="client">
-                        <div class="info-client">
-                            <p>09:00</p>
-                            <div class="names">
-                                <p>Thor</p>
-                                <span>/ Fernanda Costa</span>
-                            </div>
-                            <span>Vacinação</span>
-                        </div>
-                        <a href="#">Remover agendamento</a>
+                <div id="input-date-container">
+                    <img src="./src/assets/calendar.svg" alt="calendar">
+                    <input id="date-search" type="date">
+                </div>
+            </div>
+            <div id="list">
+                <div class="period" id="morning">
+                    <div class="header">
+                        <img src="./src/assets/sun.svg" alt="sun">
+                        <h4>Manhã</h4>
+                        <p>09h-12h</p>
                     </div>
-                </div>
-            </div>
+                    <div class="clients">
 
-            <div class="period" id="afternoon">
-                <div id="header">
-                    <img src="./src/assets/cloud-sun.svg" alt="cloud and sun">
-                    <h4>Tarde</h4>
-                    <p>13h-18h</p>
+                    </div>
                 </div>
-                <div id="clients">
-                    <div class="client">
-                        <div class="info-client">
-                            <p>13:00</p>
-                            <div class="names">
-                                <p>Mel</p>
-                                <span>/ João Souza</span>
-                            </div>
-                            <span>Corte de Unhas</span>
-                        </div>
-                        <a href="#">Remover agendamento</a>
+
+                <div class="period" id="afternoon">
+                    <div class="header">
+                        <img src="./src/assets/cloud-sun.svg" alt="cloud and sun">
+                        <h4>Tarde</h4>
+                        <p>13h-18h</p>
                     </div>
-                    <div class="client">
-                        <div class="info-client">
-                            <p>14:00</p>
-                            <div class="names">
-                                <p>Bella</p>
-                                <span>/ Pedro Martins</span>
-                            </div>
-                            <span>Aplicação de Antipulgas</span>
-                        </div>
-                        <a href="#">Remover agendamento</a>
+                    <div class="clients">
+
                     </div>
-                    <div class="client">
-                        <div class="info-client">
-                            <p>15:00</p>
-                            <div class="names">
-                                <p>Simba</p>
-                                <span>/ Juliana Rocha</span>
-                            </div>
-                            <span>Tosa Higiênica</span>
-                        </div>
-                        <a href="#">Remover agendamento</a>
+                </div>
+
+                <div class="period" id="night">
+                    <div class="header">
+                        <img src="./src/assets/moon.svg" alt="moon">
+                        <h4>Noite</h4>
+                        <p>19h-21h</p>
                     </div>
+                    <div class="clients">
+
+                    </div>
+
                 </div>
             </div>
-
-
-            <div class="period" id="night">
-                <div id="header">
-                    <img src="./src/assets/moon.svg" alt="moon">
-                    <h4>Noite</h4>
-                    <p>19h-21h</p>
-                </div>
-                <div id="clients">
-                    <div class="client">
-                        <div class="info-client">
-                            <p>20:00</p>
-                            <div class="names">
-                                <p>Max</p>
-                                <span>/ Camila Santos</span>
-                            </div>
-                            <span>Limpeza de dentes</span>
-                        </div>
-                        <a href="#">Remover agendamento</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <button>NOVO AGENDAMENTO</button>
-    </footer>
+        </main>
+        <footer>
+            <button id="new-appointment-button">NOVO AGENDAMENTO</button>
+        </footer>
+    </div>
 
     <div id="modal-wrapper">
         <div id="modal">
             <div id="form-container">
+                <img id="close-icon" src="./src/assets/close.svg" alt="close icon">
                 <div id="form-header">
                     <h2>Agende um atendimento</h2>
                     <p>Preencha os dados do cliente para realizar o agendamento:</p>
@@ -135,46 +86,52 @@
                         <p>Nome do tutor</p>
                         <div class="input">
                             <img src="./src/assets/user.svg" alt="user icon">
-                            <input type="text" placeholder="Helena Souza">
+                            <input id="client-name" type="text" placeholder="Helena Souza" maxlength="30" required>
                         </div>
                     </div>
                     <div class="input-container">
                         <p>Nome do pet</p>
                         <div class="input">
                             <img src="./src/assets/pet-footprint.svg" alt="pet footprint icon">
-                            <input type="text" placeholder="Cheddar">
+                            <input id="pet-name" maxlength="10" type="text" placeholder="Cheddar" required>
                         </div>
                     </div>
                     <div class="input-container">
                         <p>Telefone</p>
                         <div class="input">
                             <img src="./src/assets/phone.svg" alt="phone icon">
-                            <input type="text" placeholder="00000 000000">
+                            <input type="tel" id="phone" name="phone" placeholder="+44 7700 900123"
+                                pattern="^\+?[0-9\s\-()]{7,20}$" required />
                         </div>
                     </div>
                     <div class="input-container">
                         <p>Descrição do serviço</p>
                         <div class="input">
-                            <textarea placeholder="banho e tosa"></textarea>
+                            <textarea id="description" placeholder="banho e tosa" required></textarea>
                         </div>
                     </div>
-                    <div class="input-container">
-                        <p>Data</p>
-                        <div class="input">
-                            <img src="./src/assets/calendar.svg" alt="calendar icon">
-                            <input type="date">
+                    <div id="date-hour-container">
+                        <div class="input-container">
+                            <p>Data</p>
+                            <div class="input">
+                                <img src="./src/assets/calendar.svg" alt="calendar icon">
+                                <input id="input-date" type="date" required>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <p>Hora</p>
+                            <div class="input">
+                                <img src="./src/assets/clock.svg" alt="clock icon">
+                                <input id="input-time" type="time" value="09:00" min="09:00" max="21:00" step="3600"
+                                    required>
+                            </div>
                         </div>
                     </div>
-                    <div class="input-container">
-                        <p>Hora</p>
-                        <div class="input">
-                            <img src="./src/assets/clock.svg" alt="clock icon">
-                            <input id="input-time" type="time" value="09:00">
-                        </div>
-                    </div>
+                    <span id="availability-error">Esse horário não está disponível! Por favor, escolha outro
+                        horário.</span>
+                    <button type="submit" id="submit-button">AGENDAR</button>
                 </form>
 
-                <button>AGENDAR</button>
             </div>
         </div>
     </div>

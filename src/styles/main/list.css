@@ -14,7 +14,7 @@
         border-radius: 10px;
         background: var(--background-tertiary);
 
-        & > #header {
+        & > .header {
             display: flex;
             padding: 12px 20px;
             align-items: center;
@@ -43,7 +43,7 @@
             }
         }
 
-        & > #clients {
+        & > .clients {
             display: flex;
             padding: 20px;
             flex-direction: column;
@@ -54,65 +54,94 @@
 
             & > .client {
                 display: flex;
-                padding: 12px;
                 flex-direction: column;
-                align-items: flex-end;
-                gap: 8px;
+                align-items: flex-start;
+                padding: 12px;
+                gap: 4px;
                 align-self: stretch;
 
                 &:not(:last-of-type) {
                     border-bottom: 0.6px solid #353339;
                 }
 
-                & > a {
-                    all: unset;
-                    color: var(--content-tertiary, #666);
-                    text-align: center;
-                    font: var(--paragraph-small);
-                }
-
-                & > .info-client {
+                & > .schedule-info {
                     display: flex;
-                    align-items: flex-start;
-                    align-content: flex-start;
-                    gap: 0px 12px;
-                    align-self: stretch;
-                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 12px;
 
-                    & > p {
-                        all: unset;
+                    & > .hour {
+                        margin: 0px;
                         color: var(--content-primary);
                         font: var(--label-medium);
                     }
 
                     & > .names {
                         display: flex;
-                        align-items: flex-start;
                         gap: 4px;
 
-                        & > p {
-                            all: unset;
+                        & > strong {
                             color: var(--content-primary);
                             font: var(--label-medium);
                         }
 
                         & > span {
-                            all: unset;
                             color: var(--content-secondary);
                             font: var(--paragraph-medium);
                         }
                     }
+                }
 
-                    & > span {
-                        all: unset;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                & > .description {
+                    color: var(--content-secondary);
+                    font: var(--paragraph-medium);
+                }
 
-                        color: var(--content-secondary);
-                        font: var(--paragraph-medium);
+                & > .cancel-link {
+                    all: unset;
+                    align-self: flex-end;
+                    color: var(--content-tertiary);
+                    font: var(--paragraph-small);
+                    cursor: pointer;
+                    text-align: right;
+
+                    &:hover {
+                        color: var(--content-primary);
+                        text-decoration: underline;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 60em) {
+    .clients {
+        gap: 12px !important;
+        & > .client {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+
+            & > .schedule-info {
+                display: flex !important;
+
+                & > .names {
+                    & > strong {
+                        font: var(--label-small) !important;
+                    }
+
+                    & > span {
+                        font: var(--paragraph-small) !important;
+                    }
+                }
+            }
+
+            & > .description {
+                font: var(--paragraph-small) !important;
+            }
+
+            & > .cancel-link {
+                align-self: auto !important;
             }
         }
     }

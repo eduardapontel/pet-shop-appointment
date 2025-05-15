@@ -1,79 +1,111 @@
-main {
+#main-container {
     display: flex;
-    padding: 12px 20px;
     flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    margin-top: 9px;
-    margin-bottom: 44px;
+    min-height: calc(100vh - 48px);
+    margin: 0;
+    justify-content: space-between;
 
-    & > #main-header {
+    & > main {
         display: flex;
-        max-width: 920px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        align-self: stretch;
+        align-items: center;
+        flex: 1;
+        padding: 12px 20px;
+        gap: 32px;
+        margin-top: 9px;
+        margin-bottom: 44px;
 
-        & > #titles-container {
+        & > #main-header {
             display: flex;
+            max-width: 920px;
             flex-direction: column;
             align-items: flex-start;
-            gap: 4px;
+            gap: 12px;
             align-self: stretch;
 
-            & > h1 {
-                all: unset;
+            & > #titles-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
                 align-self: stretch;
-                color: #f5f4f5;
-                font: var(--title);
+
+                & > h1 {
+                    all: unset;
+                    align-self: stretch;
+                    color: #f5f4f5;
+                    font: var(--title);
+                }
+
+                & > h3 {
+                    all: unset;
+                    align-self: stretch;
+                    color: var(--content-secondary);
+                    font: var(--paragraph-medium);
+                }
             }
 
-            & > h3 {
-                all: unset;
+            & > #input-date-container {
+                width: fit-content;
+                height: 24px;
+                display: flex;
+                padding: 12px;
+                align-items: flex-start;
+                gap: 8px;
                 align-self: stretch;
-                color: var(--content-secondary);
-                font: var(--paragraph-medium);
+                border-radius: 8px;
+                border: 1px solid var(--border-primary);
+
+                & > img {
+                    align-self: center;
+                }
+
+                & > input[type='date'] {
+                    display: flex;
+                    all: unset;
+
+                    color: var(--content-secondary);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+
+                    background-image: url('../../assets/arrow-down.svg');
+                    background-repeat: no-repeat;
+                    background-position: right 10px center;
+                    background-size: 20px;
+                    padding-right: 10px;
+                    cursor: pointer;
+
+                    &::-webkit-calendar-picker-indicator {
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
             }
         }
+    }
+}
 
-        & > #input-date-container {
-            width: fit-content;
-            height: 24px;
-            display: flex;
-            padding: 12px;
-            align-items: flex-start;
-            gap: 8px;
-            align-self: stretch;
-            border-radius: 8px;
-            border: 1px solid var(--border-primary);
+@media (min-width: 60em) {
+    #main-container {
+        padding: 80px;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        min-height: calc(100vh - 208px);
 
-            & > img {
-                align-self: center;
-            }
+        & > main {
+            max-width: 800px;
+            margin-bottom: 0px;
+            flex: 1;
 
-            & > input[type='date'] {
+            & > #main-header {
                 display: flex;
-                all: unset;
-
-                color: var(--content-secondary);
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-
-                background-image: url('../../assets/arrow-down.svg');
-                background-repeat: no-repeat;
-                background-position: right 10px center;
-                background-size: 20px;
-                padding-right: 10px;
-                cursor: pointer;
-
-                &::-webkit-calendar-picker-indicator {
-                    opacity: 0;
-                    cursor: pointer;
-                }
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 30px;
             }
         }
     }
