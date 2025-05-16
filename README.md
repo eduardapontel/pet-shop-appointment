@@ -23,14 +23,14 @@ The layout showcases the structure, color scheme, and visual design of the web a
 
 ## Project Structure 🗂️
 
-1. `hairday/`
+1. `pet-shop-appointment/`
    - `index.html`: The main HTML file that serves as the entry point for the application.
    - `package.json`: Contains metadata about the project, including dependencies and scripts.
    - `package-lock.json`: Locks the versions of dependencies for consistent installs.
    - `server.json`: Configuration file for server settings.
    - `webpack.config.js`: Configuration file for Webpack, a module bundler used to compile and bundle the project's assets.
 
-2. `hairday/src/`
+2. `pet-shop-appointment/src/`
    - Contains the main source code for the application.
      - **`assets/`**: Contains static assets such as images and icons used in the application.
        - Example files: `dog.svg`, `calendar.svg`, etc.
