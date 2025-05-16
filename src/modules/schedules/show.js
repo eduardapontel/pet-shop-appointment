@@ -10,6 +10,8 @@ export function showSchedules({ dailySchedules }) {
         afternoon.innerHTML = '';
         night.innerHTML = '';
 
+        dailySchedules.sort((a, b) => dayjs(a.when).diff(dayjs(b.when)));
+
         dailySchedules.forEach((schedule) => {
             const scheduleTime = dayjs(schedule.when).format('HH:mm');
             const period = getPeriod(scheduleTime);

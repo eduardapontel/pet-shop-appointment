@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { selectedSearchDate } from '../page-load';
+import { updateAvailability } from './check-hours.js';
 
 const newAppointmentButton = document.querySelector('#new-appointment-button');
 const modalWrapper = document.querySelector('#modal-wrapper');
@@ -7,11 +7,16 @@ const formContainer = document.querySelector('#form-container');
 const closeIcon = document.querySelector('#close-icon');
 const selectedDate = document.querySelector('#input-date');
 const today = dayjs(new Date()).format('YYYY-MM-DD');
+const selectedSearchDate = document.querySelector('#date-search');
 
-newAppointmentButton.addEventListener('click', () => {
+newAppointmentButton.addEventListener('click', async () => {
     modalWrapper.style.display = 'block';
-    selectedDate.value = selectedSearchDate.value;
+
+    const currentDate = selectedSearchDate.value || dayjs().format('YYYY-MM-DD');
+    selectedDate.value = currentDate;
     selectedDate.min = today;
+
+    await updateAvailability(currentDate);
 });
 
 document.addEventListener('click', (event) => {
