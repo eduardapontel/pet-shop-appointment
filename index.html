@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Pet</title>
+    <title>Pet World</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:wght@700&family=Inter:opsz,wght@14..32,100..900&display=swap"
         rel="stylesheet">
@@ -16,7 +16,7 @@
     <header>
         <div id="logo">
             <img src="./src/assets/dog.svg" alt="dog">
-            <h2>Mundo Pet</h2>
+            <h2>Pet World</h2>
         </div>
     </header>
 
@@ -24,8 +24,8 @@
         <main>
             <div id="main-header">
                 <div id="titles-container">
-                    <h1>Sua agenda</h1>
-                    <h3>Aqui você pode ver todos os clientes e serviços agendados para hoje.</h3>
+                    <h1>Your Schedule</h1>
+                    <h3>Here you can see all clients and services scheduled for today.</h3>
                 </div>
                 <div id="input-date-container">
                     <img src="./src/assets/calendar.svg" alt="calendar">
@@ -36,40 +36,39 @@
                 <div class="period" id="morning">
                     <div class="header">
                         <img src="./src/assets/sun.svg" alt="sun">
-                        <h4>Manhã</h4>
-                        <p>09h-12h</p>
+                        <h4>Morning</h4>
+                        <p>9 AM – 12 PM</p>
                     </div>
                     <div class="clients">
-
+                        <!-- Clients will be listed here -->
                     </div>
                 </div>
 
                 <div class="period" id="afternoon">
                     <div class="header">
                         <img src="./src/assets/cloud-sun.svg" alt="cloud and sun">
-                        <h4>Tarde</h4>
-                        <p>13h-18h</p>
+                        <h4>Afternoon</h4>
+                        <p>1 PM – 6 PM</p>
                     </div>
                     <div class="clients">
-
+                        <!-- Clients will be listed here -->
                     </div>
                 </div>
 
                 <div class="period" id="night">
                     <div class="header">
                         <img src="./src/assets/moon.svg" alt="moon">
-                        <h4>Noite</h4>
-                        <p>19h-21h</p>
+                        <h4>Evening</h4>
+                        <p>7 PM – 9 PM</p>
                     </div>
                     <div class="clients">
-
+                        <!-- Clients will be listed here -->
                     </div>
-
                 </div>
             </div>
         </main>
         <footer>
-            <button id="new-appointment-button">NOVO AGENDAMENTO</button>
+            <button id="new-appointment-button">NEW APPOINTMENT</button>
         </footer>
     </div>
 
@@ -78,26 +77,26 @@
             <div id="form-container">
                 <img id="close-icon" src="./src/assets/close.svg" alt="close icon">
                 <div id="form-header">
-                    <h2>Agende um atendimento</h2>
-                    <p>Preencha os dados do cliente para realizar o agendamento:</p>
+                    <h2>Schedule an Appointment</h2>
+                    <p>Fill in the client's details to schedule the service:</p>
                 </div>
                 <form action="">
                     <div class="input-container">
-                        <p>Nome do tutor</p>
+                        <p>Guardian's Name</p>
                         <div class="input">
                             <img src="./src/assets/user.svg" alt="user icon">
                             <input id="client-name" type="text" placeholder="Helena Souza" maxlength="30" required>
                         </div>
                     </div>
                     <div class="input-container">
-                        <p>Nome do pet</p>
+                        <p>Pet's Name</p>
                         <div class="input">
                             <img src="./src/assets/pet-footprint.svg" alt="pet footprint icon">
                             <input id="pet-name" maxlength="10" type="text" placeholder="Cheddar" required>
                         </div>
                     </div>
                     <div class="input-container">
-                        <p>Telefone</p>
+                        <p>Phone</p>
                         <div class="input">
                             <img src="./src/assets/phone.svg" alt="phone icon">
                             <input type="tel" id="phone" name="phone" placeholder="+44 7700 900123"
@@ -105,21 +104,21 @@
                         </div>
                     </div>
                     <div class="input-container">
-                        <p>Descrição do serviço</p>
+                        <p>Service Description</p>
                         <div class="input">
-                            <textarea id="description" placeholder="banho e tosa" required></textarea>
+                            <textarea id="description" placeholder="bath and grooming" required></textarea>
                         </div>
                     </div>
                     <div id="date-hour-container">
                         <div class="input-container">
-                            <p>Data</p>
+                            <p>Date</p>
                             <div class="input">
                                 <img src="./src/assets/calendar.svg" alt="calendar icon">
                                 <input id="input-date" type="date" required>
                             </div>
                         </div>
                         <div class="input-container">
-                            <p>Hora</p>
+                            <p>Time</p>
                             <div class="input">
                                 <img src="./src/assets/clock.svg" alt="clock icon">
                                 <input id="input-time" type="time" value="09:00" min="09:00" max="21:00" step="3600"
@@ -127,11 +126,9 @@
                             </div>
                         </div>
                     </div>
-                    <span id="availability-error">Esse horário não está disponível! Por favor, escolha outro
-                        horário.</span>
-                    <button type="submit" id="submit-button">AGENDAR</button>
+                    <span id="availability-error">This time slot is not available! Please choose another one.</span>
+                    <button type="submit" id="submit-button">SCHEDULE</button>
                 </form>
-
             </div>
         </div>
     </div>
