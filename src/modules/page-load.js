@@ -1,18 +1,18 @@
 import dayjs from 'dayjs';
 import { daySchedules } from './schedules/load';
 
-const selectedDate = document.querySelector('#date-search');
+export const selectedSearchDate = document.querySelector('#date-search');
 
 document.addEventListener('DOMContentLoaded', () => {
     setTodayAsDefault();
-    daySchedules(selectedDate.value);
+    daySchedules(selectedSearchDate.value);
 });
 
-selectedDate.addEventListener('change', () => {
-    daySchedules(selectedDate.value);
+selectedSearchDate.addEventListener('change', () => {
+    daySchedules(selectedSearchDate.value);
 });
 
 function setTodayAsDefault() {
     const today = dayjs(new Date()).format('YYYY-MM-DD');
-    selectedDate.value = today;
+    selectedSearchDate.value = today;
 }
