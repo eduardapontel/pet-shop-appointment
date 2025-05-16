@@ -14,10 +14,10 @@ The layout showcases the structure, color scheme, and visual design of the web a
 
 ## Features ✨
 
-- **Add new appointments**;
-- **View appointments categorized by time of day** (morning, afternoon, and evening);
-- **Delete an appointment**;
-- **Filter appointments by date**.
+- Add new appointments;
+- View appointments categorized by time of day (morning, afternoon, and evening);
+- Delete an appointment;
+- Filter appointments by date.
 
 <br>
 
