@@ -18,6 +18,7 @@ The layout showcases the structure, color scheme, and visual design of the web a
 - View appointments categorized by time of day (morning, afternoon, and evening);
 - Delete an appointment;
 - Filter appointments by date.
+- Prevent scheduling duplicate times — appointments cannot be created with the same time as an existing one.
 
 <br>
 
