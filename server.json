@@ -1,12 +1,4 @@
 {
   "schedules": [
-    {
-      "id": "1747365233610",
-      "clientName": "Helena",
-      "petName": "mel",
-      "phone": "+447598881490",
-      "description": "banho",
-      "when": "2025-05-16T08:00:00.000Z"
-    }
   ]
 }
